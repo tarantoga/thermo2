@@ -66,7 +66,7 @@ while 1:
                 temp = command[4:]
                 ftemp = float(temp)
                 r.lpush("%sval" % address, round(ftemp, 1)) #remember value
-                r.ltrim(address, 0, 2879)
+                r.ltrim("%sval" % address, 0, 2879)
                 print("%s temp: %.1f" % (t, ftemp))
  
                 draw.rectangle((0,0,width,height), outline=0, fill=0)
